@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CA0EEA329F5D118005989BF /* TouchMoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0EEA229F5D118005989BF /* TouchMoveView.swift */; };
+		8CDDE3DF29C211AC002A8E86 /* RetroTennisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */; };
+		8CDDE3E129C211AC002A8E86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3E029C211AC002A8E86 /* ContentView.swift */; };
+		8CDDE3E329C211AF002A8E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDE3E229C211AF002A8E86 /* Assets.xcassets */; };
+		8CDDE3E629C211AF002A8E86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDE3E529C211AF002A8E86 /* Preview Assets.xcassets */; };
+		8CDDE3F029C211AF002A8E86 /* RetroTennisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3EF29C211AF002A8E86 /* RetroTennisTests.swift */; };
+		8CDDE3FA29C211AF002A8E86 /* RetroTennisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3F929C211AF002A8E86 /* RetroTennisUITests.swift */; };
+		8CDDE3FC29C211AF002A8E86 /* RetroTennisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3FB29C211AF002A8E86 /* RetroTennisUITestsLaunchTests.swift */; };
+		8CE543E52A1039A500C15076 /* Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE543E42A1039A500C15076 /* Motion.swift */; };
+		8CE543E72A1057AD00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
+		8CE543E82A1057AF00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
+		8CE543E92A1057AF00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CDDE3EC29C211AF002A8E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CDDE3D329C211AC002A8E86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CDDE3DA29C211AC002A8E86;
+			remoteInfo = RetroTennis;
+		};
+		8CDDE3F629C211AF002A8E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CDDE3D329C211AC002A8E86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CDDE3DA29C211AC002A8E86;
+			remoteInfo = RetroTennis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8CA0EEA229F5D118005989BF /* TouchMoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMoveView.swift; sourceTree = "<group>"; };
+		8CDDE3DB29C211AC002A8E86 /* RetroTennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroTennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisApp.swift; sourceTree = "<group>"; };
+		8CDDE3E029C211AC002A8E86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8CDDE3E229C211AF002A8E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CDDE3E529C211AF002A8E86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8CDDE3EB29C211AF002A8E86 /* RetroTennisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroTennisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDDE3EF29C211AF002A8E86 /* RetroTennisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisTests.swift; sourceTree = "<group>"; };
+		8CDDE3F529C211AF002A8E86 /* RetroTennisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroTennisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDDE3F929C211AF002A8E86 /* RetroTennisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisUITests.swift; sourceTree = "<group>"; };
+		8CDDE3FB29C211AF002A8E86 /* RetroTennisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8CE543E42A1039A500C15076 /* Motion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
+		8CE543E62A1054D800C15076 /* Pixeboy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeboy.ttf; sourceTree = "<group>"; };
+		8CE543EA2A105D0000C15076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CDDE3D829C211AC002A8E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3E829C211AF002A8E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3F229C211AF002A8E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CDDE3D229C211AC002A8E86 = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3DD29C211AC002A8E86 /* RetroTennis */,
+				8CDDE3EE29C211AF002A8E86 /* RetroTennisTests */,
+				8CDDE3F829C211AF002A8E86 /* RetroTennisUITests */,
+				8CDDE3DC29C211AC002A8E86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CDDE3DC29C211AC002A8E86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3DB29C211AC002A8E86 /* RetroTennis.app */,
+				8CDDE3EB29C211AF002A8E86 /* RetroTennisTests.xctest */,
+				8CDDE3F529C211AF002A8E86 /* RetroTennisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CDDE3DD29C211AC002A8E86 /* RetroTennis */ = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */,
+				8CDDE3E029C211AC002A8E86 /* ContentView.swift */,
+				8CDDE3E229C211AF002A8E86 /* Assets.xcassets */,
+				8CE543EA2A105D0000C15076 /* Info.plist */,
+				8CE543E62A1054D800C15076 /* Pixeboy.ttf */,
+				8CDDE3E429C211AF002A8E86 /* Preview Content */,
+				8CA0EEA229F5D118005989BF /* TouchMoveView.swift */,
+				8CE543E42A1039A500C15076 /* Motion.swift */,
+			);
+			path = RetroTennis;
+			sourceTree = "<group>";
+		};
+		8CDDE3E429C211AF002A8E86 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3E529C211AF002A8E86 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CDDE3EE29C211AF002A8E86 /* RetroTennisTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3EF29C211AF002A8E86 /* RetroTennisTests.swift */,
+			);
+			path = RetroTennisTests;
+			sourceTree = "<group>";
+		};
+		8CDDE3F829C211AF002A8E86 /* RetroTennisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CDDE3F929C211AF002A8E86 /* RetroTennisUITests.swift */,
+				8CDDE3FB29C211AF002A8E86 /* RetroTennisUITestsLaunchTests.swift */,
+			);
+			path = RetroTennisUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CDDE3DA29C211AC002A8E86 /* RetroTennis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CDDE3FF29C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennis" */;
+			buildPhases = (
+				8CDDE3D729C211AC002A8E86 /* Sources */,
+				8CDDE3D829C211AC002A8E86 /* Frameworks */,
+				8CDDE3D929C211AC002A8E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetroTennis;
+			productName = RetroTennis;
+			productReference = 8CDDE3DB29C211AC002A8E86 /* RetroTennis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CDDE3EA29C211AF002A8E86 /* RetroTennisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CDDE40229C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennisTests" */;
+			buildPhases = (
+				8CDDE3E729C211AF002A8E86 /* Sources */,
+				8CDDE3E829C211AF002A8E86 /* Frameworks */,
+				8CDDE3E929C211AF002A8E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CDDE3ED29C211AF002A8E86 /* PBXTargetDependency */,
+			);
+			name = RetroTennisTests;
+			productName = RetroTennisTests;
+			productReference = 8CDDE3EB29C211AF002A8E86 /* RetroTennisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CDDE3F429C211AF002A8E86 /* RetroTennisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CDDE40529C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennisUITests" */;
+			buildPhases = (
+				8CDDE3F129C211AF002A8E86 /* Sources */,
+				8CDDE3F229C211AF002A8E86 /* Frameworks */,
+				8CDDE3F329C211AF002A8E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CDDE3F729C211AF002A8E86 /* PBXTargetDependency */,
+			);
+			name = RetroTennisUITests;
+			productName = RetroTennisUITests;
+			productReference = 8CDDE3F529C211AF002A8E86 /* RetroTennisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CDDE3D329C211AC002A8E86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8CDDE3DA29C211AC002A8E86 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8CDDE3EA29C211AF002A8E86 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8CDDE3DA29C211AC002A8E86;
+					};
+					8CDDE3F429C211AF002A8E86 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8CDDE3DA29C211AC002A8E86;
+					};
+				};
+			};
+			buildConfigurationList = 8CDDE3D629C211AC002A8E86 /* Build configuration list for PBXProject "RetroTennis" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CDDE3D229C211AC002A8E86;
+			productRefGroup = 8CDDE3DC29C211AC002A8E86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CDDE3DA29C211AC002A8E86 /* RetroTennis */,
+				8CDDE3EA29C211AF002A8E86 /* RetroTennisTests */,
+				8CDDE3F429C211AF002A8E86 /* RetroTennisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CDDE3D929C211AC002A8E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDDE3E629C211AF002A8E86 /* Preview Assets.xcassets in Resources */,
+				8CDDE3E329C211AF002A8E86 /* Assets.xcassets in Resources */,
+				8CE543E72A1057AD00C15076 /* Pixeboy.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3E929C211AF002A8E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE543E82A1057AF00C15076 /* Pixeboy.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3F329C211AF002A8E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE543E92A1057AF00C15076 /* Pixeboy.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CDDE3D729C211AC002A8E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDDE3E129C211AC002A8E86 /* ContentView.swift in Sources */,
+				8CE543E52A1039A500C15076 /* Motion.swift in Sources */,
+				8CDDE3DF29C211AC002A8E86 /* RetroTennisApp.swift in Sources */,
+				8CA0EEA329F5D118005989BF /* TouchMoveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3E729C211AF002A8E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDDE3F029C211AF002A8E86 /* RetroTennisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CDDE3F129C211AF002A8E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDDE3FC29C211AF002A8E86 /* RetroTennisUITestsLaunchTests.swift in Sources */,
+				8CDDE3FA29C211AF002A8E86 /* RetroTennisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CDDE3ED29C211AF002A8E86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CDDE3DA29C211AC002A8E86 /* RetroTennis */;
+			targetProxy = 8CDDE3EC29C211AF002A8E86 /* PBXContainerItemProxy */;
+		};
+		8CDDE3F729C211AF002A8E86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CDDE3DA29C211AC002A8E86 /* RetroTennis */;
+			targetProxy = 8CDDE3F629C211AF002A8E86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8CDDE3FD29C211AF002A8E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CDDE3FE29C211AF002A8E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CDDE40029C211AF002A8E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RetroTennis/Preview Content\"";
+				DEVELOPMENT_TEAM = PJHWW2K696;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RetroTennis/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CDDE40129C211AF002A8E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RetroTennis/Preview Content\"";
+				DEVELOPMENT_TEAM = PJHWW2K696;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RetroTennis/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8CDDE40329C211AF002A8E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HH3JD7K438;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetroTennis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetroTennis";
+			};
+			name = Debug;
+		};
+		8CDDE40429C211AF002A8E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HH3JD7K438;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetroTennis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetroTennis";
+			};
+			name = Release;
+		};
+		8CDDE40629C211AF002A8E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HH3JD7K438;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetroTennis;
+			};
+			name = Debug;
+		};
+		8CDDE40729C211AF002A8E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HH3JD7K438;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.app.RetroTennisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetroTennis;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CDDE3D629C211AC002A8E86 /* Build configuration list for PBXProject "RetroTennis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CDDE3FD29C211AF002A8E86 /* Debug */,
+				8CDDE3FE29C211AF002A8E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CDDE3FF29C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CDDE40029C211AF002A8E86 /* Debug */,
+				8CDDE40129C211AF002A8E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CDDE40229C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CDDE40329C211AF002A8E86 /* Debug */,
+				8CDDE40429C211AF002A8E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CDDE40529C211AF002A8E86 /* Build configuration list for PBXNativeTarget "RetroTennisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CDDE40629C211AF002A8E86 /* Debug */,
+				8CDDE40729C211AF002A8E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CDDE3D329C211AC002A8E86 /* Project object */;
+}
