@@ -96,6 +96,7 @@ struct ContentView: View {
                     
                     touchMoveView
                         .onReceive(touchMoveView.touchMovePublisher()) {
+                        .onReceive(touchMoveView.touchMovePublisher()) {  // touch event erhalten und die Bewegung in Position des rechten oder linken Schlägers umrechnen
                             data in
                             let halfHeight = (self.racketDimension.height/2.0 + self.blackViewEdges)
                             var y = data.point.y
@@ -119,6 +120,7 @@ struct ContentView: View {
                         .opacity(self.isHidden ? 1.0 : 0.0)
                         .onReceive(self.motion.motionPublisher(playfieldgeometry.size))
                     {
+                        // die momentane Position des Balls erhalten und die Meldung erhalten, ob der Ball ausserhalb des Spielfelds ist.
                         (ballPosition,gameEnding) in
                         self.ballPosition = ballPosition
                         switch gameEnding {

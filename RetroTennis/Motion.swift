@@ -67,6 +67,7 @@ class Motion {
         if CGRectContainsPoint(racketRightRect,  CGPoint.init(x: self.currentPosition.x+racketDimension.width,
                                                               y: self.currentPosition.y ))
         {
+            // Ball trifft auf den rechten Schläger und prallt ab
             self.startPosition.x = self.currentPosition.x
             self.startPosition.y = self.currentPosition.y
             self.endPosition.x = 0
