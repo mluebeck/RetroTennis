@@ -23,7 +23,6 @@ class Motion {
     var startPosition = CGPoint(x:0,y:120)
     var endPosition = CGPoint(x:0,y:120)
     var currentPosition = CGPoint.init(x: 0, y: 0)
-    var update : (CGPoint) -> () = { _ in }
     var size : CGSize = CGSize.zero
     
     func motionPublisher(_ size:CGSize) -> AnyPublisher<(CGPoint,Ballposition), Never> {
@@ -73,7 +72,6 @@ class Motion {
     func nextStep() {
         self.currentPosition.x += self.step
         self.currentPosition.y = self.f()
-        update(self.currentPosition)
         if self.currentPosition.x<0  {
             self.motionSubject.send((self.currentPosition,Ballposition.missedLeftRacket))
             return
