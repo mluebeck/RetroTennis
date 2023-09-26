@@ -15,6 +15,11 @@ enum Ballposition {
     case isInPlayfield
 }
 
+enum StartPosition {
+    case leftPartOfPlayfield
+    case rightPartOfPlayfield
+}
+
 class Motion {
     let motionSubject = PassthroughSubject<(CGPoint,Ballposition), Never>()
     let schrittweite : Double = 10
@@ -24,6 +29,14 @@ class Motion {
     var endPosition = CGPoint(x:0,y:120)
     var currentPosition = CGPoint.init(x: 0, y: 0)
     var size : CGSize = CGSize.zero
+    
+    func chooseRandomlyStartPosition()->StartPosition {
+        if Bool.random() == true {
+            return StartPosition.leftPartOfPlayfield
+        } else {
+            return StartPosition.rightPartOfPlayfield
+        }
+    }
     
     func motionPublisher(_ size:CGSize) -> AnyPublisher<(CGPoint,Ballposition), Never> {
         self.size = size
@@ -63,7 +76,7 @@ class Motion {
     }
     
     func start() {
-        self.getStart()
+        self.setBallRandomStartPosition()
         self.currentPosition.x = self.startPosition.x
         self.currentPosition.y = self.startPosition.y
         self.nextStep()
@@ -96,8 +109,8 @@ class Motion {
         return self.currentPosition.x * steigung + b
     }
     
-    func getStart() {
-        if Bool.random() == true {
+    func setBallRandomStartPosition() {
+        if self.chooseRandomlyStartPosition() == .leftPartOfPlayfield {
             self.startPosition.x = CGFloat.random(in: 0..<self.size.width/2.0)
             self.startPosition.y = CGFloat.random(in: 0..<self.size.height)
             self.endPosition.x = self.size.width
