@@ -119,18 +119,19 @@ struct ContentView: View {
                         .opacity(self.isHidden ? 1.0 : 0.0)
                         .onReceive(self.motion.motionPublisher(playfieldgeometry.size))
                     {
-                        data in
-                        self.ballPosition = data.0
-                        if let gameEnding = data.1 {
-                            if gameEnding == Ballposition.missedLeftRacket {
-                                self.scoreRight += 1
-                                self.buttonText = "PLAYER 2 WINS\n\n PRESS TO PLAY"
-                            }
-                            if gameEnding == Ballposition.missedRightRacket {
-                                self.scoreLeft += 1
-                                self.buttonText = "PLAYER 1 WINS\n\n PRESS TO PLAY"
-                            }
+                        (ballPosition,gameEnding) in
+                        self.ballPosition = ballPosition
+                        switch gameEnding {
+                        case .missedLeftRacket:
+                            self.scoreRight += 1
+                            self.buttonText = "PLAYER 2 WINS\n\n PRESS TO PLAY"
                             self.isHidden = false
+                        case .missedRightRacket:
+                            self.scoreLeft += 1
+                            self.buttonText = "PLAYER 1 WINS\n\n PRESS TO PLAY"
+                            self.isHidden = false
+                        case .isInPlayfield:
+                            break
                         }
                         self.motion.coordinateWith(racketLeft: self.leftRacket,
                                                    racketRight: self.rightRacket,

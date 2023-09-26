@@ -16,7 +16,7 @@ enum Ballposition {
 }
 
 class Motion {
-    let motionSubject = PassthroughSubject<(CGPoint,Ballposition?), Never>()
+    let motionSubject = PassthroughSubject<(CGPoint,Ballposition), Never>()
     let schrittweite : Double = 10
     var stepDuration = 0.1
     var step : Double = 0
@@ -26,7 +26,7 @@ class Motion {
     var update : (CGPoint) -> () = { _ in }
     var size : CGSize = CGSize.zero
     
-    func motionPublisher(_ size:CGSize) -> AnyPublisher<(CGPoint,Ballposition?), Never> {
+    func motionPublisher(_ size:CGSize) -> AnyPublisher<(CGPoint,Ballposition), Never> {
         self.size = size
         return self.motionSubject.eraseToAnyPublisher()
     }
@@ -78,13 +78,13 @@ class Motion {
             self.motionSubject.send((self.currentPosition,Ballposition.missedLeftRacket))
             return
         } else {
-            self.motionSubject.send((self.currentPosition,nil))
+            self.motionSubject.send((self.currentPosition,Ballposition.isInPlayfield))
         }
         if self.currentPosition.x>self.size.width {
             self.motionSubject.send((self.currentPosition,Ballposition.missedRightRacket))
             return
         } else {
-            self.motionSubject.send((self.currentPosition,nil))
+            self.motionSubject.send((self.currentPosition,Ballposition.isInPlayfield))
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+self.stepDuration, execute: {
             self.nextStep()
