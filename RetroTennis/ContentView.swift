@@ -73,8 +73,8 @@ struct ContentView: View {
     
     @State private var buttonText : String = "PRESS TO PLAY"
     @State private var touchMoveView = TouchMoveView()
-    @State private var leftRacket = CGPoint(x: 10, y: 120)
-    @State private var rightRacket = CGPoint(x:10, y:120)
+    @State private var leftRacketPosition = CGPoint(x: 10, y: 120)
+    @State private var rightRacketPosition = CGPoint(x:10, y:120)
     @State private var ballPosition = CGPoint(x: -100, y: -100)
     @State private var scoreLeft : Int  = 0
     @State private var scoreRight : Int = 0
@@ -89,13 +89,9 @@ struct ContentView: View {
                 GeometryReader {
                     playfieldgeometry in
                     BlackView().padding(EdgeInsets(top: self.blackViewEdges, leading: self.blackViewEdges, bottom: self.blackViewEdges, trailing: self.blackViewEdges))
-                    
-                    
                     DottedLine()
                         .stroke(style: StrokeStyle(lineWidth: 2, dash:[5])).foregroundColor(.white)
-                    
                     touchMoveView
-                        .onReceive(touchMoveView.touchMovePublisher()) {
                         .onReceive(touchMoveView.touchMovePublisher()) {  // touch event erhalten und die Bewegung in Position des rechten oder linken Schlägers umrechnen
                             data in
                             let halfHeight = (self.racketDimension.height/2.0 + self.blackViewEdges)
@@ -107,14 +103,14 @@ struct ContentView: View {
                                 y = screengeometry.size.height-halfHeight
                             }
                             if data.racket == Racket.leftRacket {
-                                self.leftRacket.y = y
+                                self.leftRacketPosition.y = y
                             } else {
-                                self.rightRacket.y = y
+                                self.rightRacketPosition.y = y
                             }
-                            self.rightRacket.x = screengeometry.size.width-10
+                            self.rightRacketPosition.x = screengeometry.size.width-10
                         }
-                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: 10, y: self.leftRacket.y))
-                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: screengeometry.size.width-10, y: self.rightRacket.y))
+                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: 10, y: self.leftRacketPosition.y))
+                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: screengeometry.size.width-10, y: self.rightRacketPosition.y))
                     Ball().frame(width: self.ballRadius,height:self.ballRadius)
                         .position(self.ballPosition)
                         .opacity(self.isHidden ? 1.0 : 0.0)
@@ -133,11 +129,11 @@ struct ContentView: View {
                             self.buttonText = "PLAYER 1 WINS\n\n PRESS TO PLAY"
                             self.isHidden = false
                         case .isInPlayfield:
-                            break
+                            self.motion.calculateNewBallTrajectoryIfHitByTheRacket(racketLeftPosition: self.leftRacketPosition,
+                                                       racketRightPosition: self.rightRacketPosition,
+                                                       racketDimension: racketDimension)
                         }
-                        self.motion.coordinateWith(racketLeft: self.leftRacket,
-                                                   racketRight: self.rightRacket,
-                                                   racketDimension: racketDimension)
+                        
                     }
                 }
                 VStack{
@@ -158,7 +154,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     self.isHidden = !self.isHidden
-                    self.motion.start()
+                    self.motion.startGame()
                 })
                 {
                     HStack {
