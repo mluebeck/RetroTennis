@@ -122,10 +122,11 @@ struct ContentView: View {
                         data in
                         self.ballPosition = data.0
                         if let gameEnding = data.1 {
-                            if gameEnding == .left {
+                            if gameEnding == Ballposition.missedLeftRacket {
                                 self.scoreRight += 1
                                 self.buttonText = "PLAYER 2 WINS\n\n PRESS TO PLAY"
-                            } else {
+                            }
+                            if gameEnding == Ballposition.missedRightRacket {
                                 self.scoreLeft += 1
                                 self.buttonText = "PLAYER 1 WINS\n\n PRESS TO PLAY"
                             }
