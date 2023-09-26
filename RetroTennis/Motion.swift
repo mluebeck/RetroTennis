@@ -8,6 +8,12 @@
 import Combine
 import UIKit 
 
+
+enum Rackets {
+    case left
+    case right
+}
+
 class Motion {
     let motionSubject = PassthroughSubject<(CGPoint,Rackets?), Never>()
     let schrittweite : Double = 10

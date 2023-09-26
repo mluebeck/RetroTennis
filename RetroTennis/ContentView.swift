@@ -21,7 +21,7 @@ struct WhiteView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
-struct Racket : UIViewRepresentable {
+struct RacketView : UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         view.backgroundColor = .white
@@ -105,15 +105,15 @@ struct ContentView: View {
                             if y>screengeometry.size.height-halfHeight {
                                 y = screengeometry.size.height-halfHeight
                             }
-                            if data.racket == Rackets.left {
+                            if data.racket == Racket.leftRacket {
                                 self.leftRacket.y = y
                             } else {
                                 self.rightRacket.y = y
                             }
                             self.rightRacket.x = screengeometry.size.width-10
                         }
-                    Racket().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: 10, y: self.leftRacket.y))
-                    Racket().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: screengeometry.size.width-10, y: self.rightRacket.y))
+                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: 10, y: self.leftRacket.y))
+                    RacketView().frame(width: self.racketDimension.width,height: self.racketDimension.height).position(CGPoint.init(x: screengeometry.size.width-10, y: self.rightRacket.y))
                     Ball().frame(width: self.ballRadius,height:self.ballRadius)
                         .position(self.ballPosition)
                         .opacity(self.isHidden ? 1.0 : 0.0)

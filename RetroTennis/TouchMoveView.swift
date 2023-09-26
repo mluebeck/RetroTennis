@@ -1,9 +1,9 @@
 import SwiftUI
 import Combine
 
-enum Rackets {
-    case right
-    case left
+enum Racket {
+    case rightRacket
+    case leftRacket
 }
 
 struct TouchMoveView: UIViewRepresentable {
@@ -16,13 +16,13 @@ struct TouchMoveView: UIViewRepresentable {
     
     func updateUIView(_ uiView: TouchMoveUIView, context: UIViewRepresentableContext<TouchMoveView>) {}
     
-    func touchMovePublisher() -> AnyPublisher<(point:CGPoint,racket:Rackets), Never> {
+    func touchMovePublisher() -> AnyPublisher<(point:CGPoint,racket:Racket), Never> {
         return view.touchMoveSubject.eraseToAnyPublisher()
     }
 }
 
 class TouchMoveUIView: UIView {
-    let touchMoveSubject = PassthroughSubject<(point:CGPoint,racket:Rackets), Never>()
+    let touchMoveSubject = PassthroughSubject<(point:CGPoint,racket:Racket), Never>()
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
@@ -30,9 +30,9 @@ class TouchMoveUIView: UIView {
         
         if location.x < self.frame.size.width / 2.0
         {
-            touchMoveSubject.send((location,Rackets.left))
+            touchMoveSubject.send((location,Racket.leftRacket))
         } else {
-            touchMoveSubject.send((location,Rackets.right))
+            touchMoveSubject.send((location,Racket.rightRacket))
         }
     }
 
