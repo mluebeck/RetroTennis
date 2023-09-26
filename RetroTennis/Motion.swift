@@ -88,24 +88,23 @@ class Motion {
         self.nextStepLoopWhileRacketsDidNotMissedTheBall()
     }
     
-    func nextStepLoopWhileRacketsDidNotMissedTheBall() {
+    func nextStepLoopWhileRacketsDidNotMissedTheBall(singeStep:Bool = false) {
         self.currentPosition.x += self.step
         self.currentPosition.y = self.calculateNextBallPosition()
         if self.currentPosition.x<0  {  //  left racket missed the ball
             self.motionSubject.send((self.currentPosition,Ballposition.missedLeftRacket))
-            return
-        } else {
-            self.motionSubject.send((self.currentPosition,Ballposition.isInPlayfield))
-        }
+        } else
         if self.currentPosition.x>self.motionParameter.size.width { //  right racket missed the ball
             self.motionSubject.send((self.currentPosition,Ballposition.missedRightRacket))
-            return
+             
         } else {
             self.motionSubject.send((self.currentPosition,Ballposition.isInPlayfield))
+            if singeStep==false {
+                DispatchQueue.main.asyncAfter(deadline: .now()+self.motionParameter.stepDuration, execute: {
+                    self.nextStepLoopWhileRacketsDidNotMissedTheBall()
+                })
+            }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now()+self.motionParameter.stepDuration, execute: {
-            self.nextStepLoopWhileRacketsDidNotMissedTheBall()
-        })
     }
     
     // funktion zum Errechnen der nächsten Position
