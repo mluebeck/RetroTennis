@@ -19,6 +19,9 @@
 		8CE543E72A1057AD00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
 		8CE543E82A1057AF00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
 		8CE543E92A1057AF00C15076 /* Pixeboy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CE543E62A1054D800C15076 /* Pixeboy.ttf */; };
+		8CE9EAE52AD9A579002C2B31 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9EAE42AD9A579002C2B31 /* XCTestCase+Snapshot.swift */; };
+		8CE9EAE72AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9EAE62AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift */; };
+		8CE9EAE92AD9B495002C2B31 /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 8CE9EAE82AD9B495002C2B31 /* snapshots */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		8CE543E42A1039A500C15076 /* Motion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
 		8CE543E62A1054D800C15076 /* Pixeboy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeboy.ttf; sourceTree = "<group>"; };
 		8CE543EA2A105D0000C15076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE9EAE42AD9A579002C2B31 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		8CE9EAE62AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisSnapshotTests.swift; sourceTree = "<group>"; };
+		8CE9EAE82AD9B495002C2B31 /* snapshots */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = snapshots; path = RetroTennisTests/snapshots; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		8CDDE3DD29C211AC002A8E86 /* RetroTennis */ = {
 			isa = PBXGroup;
 			children = (
+				8CE9EAE82AD9B495002C2B31 /* snapshots */,
 				8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */,
 				8CDDE3E029C211AC002A8E86 /* ContentView.swift */,
 				8CDDE3E229C211AF002A8E86 /* Assets.xcassets */,
@@ -127,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				8CDDE3EF29C211AF002A8E86 /* RetroTennisTests.swift */,
+				8CE9EAE42AD9A579002C2B31 /* XCTestCase+Snapshot.swift */,
+				8CE9EAE62AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift */,
 			);
 			path = RetroTennisTests;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE9EAE92AD9B495002C2B31 /* snapshots in Resources */,
 				8CDDE3E629C211AF002A8E86 /* Preview Assets.xcassets in Resources */,
 				8CDDE3E329C211AF002A8E86 /* Assets.xcassets in Resources */,
 				8CE543E72A1057AD00C15076 /* Pixeboy.ttf in Resources */,
@@ -284,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE9EAE72AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift in Sources */,
+				8CE9EAE52AD9A579002C2B31 /* XCTestCase+Snapshot.swift in Sources */,
 				8CDDE3F029C211AF002A8E86 /* RetroTennisTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
