@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C77C4DF2AE33B7200085F8B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77C4DD2AE3308400085F8B /* Extensions.swift */; };
+		8C77C4E02AE33B8800085F8B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77C4DD2AE3308400085F8B /* Extensions.swift */; };
 		8CA0EEA329F5D118005989BF /* TouchMoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0EEA229F5D118005989BF /* TouchMoveView.swift */; };
 		8CDDE3DF29C211AC002A8E86 /* RetroTennisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */; };
 		8CDDE3E129C211AC002A8E86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDE3E029C211AC002A8E86 /* ContentView.swift */; };
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C77C4DD2AE3308400085F8B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8CA0EEA229F5D118005989BF /* TouchMoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMoveView.swift; sourceTree = "<group>"; };
 		8CDDE3DB29C211AC002A8E86 /* RetroTennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroTennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDDE3DE29C211AC002A8E86 /* RetroTennisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroTennisApp.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 				8CDDE3E429C211AF002A8E86 /* Preview Content */,
 				8CA0EEA229F5D118005989BF /* TouchMoveView.swift */,
 				8CE543E42A1039A500C15076 /* Motion.swift */,
+				8C77C4DD2AE3308400085F8B /* Extensions.swift */,
 			);
 			path = RetroTennis;
 			sourceTree = "<group>";
@@ -283,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C77C4DF2AE33B7200085F8B /* Extensions.swift in Sources */,
 				8CDDE3E129C211AC002A8E86 /* ContentView.swift in Sources */,
 				8CE543E52A1039A500C15076 /* Motion.swift in Sources */,
 				8CDDE3DF29C211AC002A8E86 /* RetroTennisApp.swift in Sources */,
@@ -297,6 +302,7 @@
 				8CE9EAE72AD9B02B002C2B31 /* RetroTennisSnapshotTests.swift in Sources */,
 				8CE9EAE52AD9A579002C2B31 /* XCTestCase+Snapshot.swift in Sources */,
 				8CDDE3F029C211AF002A8E86 /* RetroTennisTests.swift in Sources */,
+				8C77C4E02AE33B8800085F8B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
